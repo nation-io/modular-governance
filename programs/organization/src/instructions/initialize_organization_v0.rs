@@ -1,17 +1,6 @@
 use crate::state::*;
 use anchor_lang::prelude::*;
 
-#[derive(InitSpace, AnchorSerialize, AnchorDeserialize, Clone, Default)]
-pub struct Choice {
-  /// Total vote weight behind this choice. u128 to support u64 tokens multiplied by a large multiplier (as in helium)
-  pub weight: u128,
-  #[max_len(200)]
-  pub name: String,
-  /// Any other data that you may want to put in here
-  #[max_len(200)]
-  pub uri: Option<String>,
-}
-
 #[derive(AnchorSerialize, AnchorDeserialize, Clone, Default)]
 pub struct InitializeOrganizationArgsV0 {
   pub name: String,

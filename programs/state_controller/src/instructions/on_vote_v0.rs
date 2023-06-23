@@ -4,11 +4,19 @@ use anchor_lang::prelude::*;
 use proposal::ProposalConfigV0;
 use proposal::ProposalState;
 use proposal::ProposalV0;
-use proposal::VoteArgsV0;
+// use proposal::VoteArgsV0 as ProposalVoteArgsV0;
 use proposal::{
   cpi::{accounts::UpdateStateV0, update_state_v0},
   UpdateStateArgsV0,
 };
+
+#[derive(AnchorSerialize, AnchorDeserialize, Clone, Default)]
+pub struct VoteArgsV0 {
+  pub choice: u16,
+  pub weight: u128,
+  /// This is a remove operation
+  pub remove_vote: bool,
+}
 
 #[derive(Accounts)]
 #[instruction(args: VoteArgsV0)]

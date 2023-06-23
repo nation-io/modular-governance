@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "typeRoots": ["node_modules/@types"],
     "strict": true,
-    "target": "es6",
+    "target": "es2020",
     "paths": {
       "@/*": ["*"]
     }

@@ -1,0 +1,2 @@
+describe("organization_wallet", () => {
+});

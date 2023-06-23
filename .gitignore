@@ -6,3 +6,5 @@ node_modules
 test-ledger
 .yalc
 yalc.lock
+
+.ammanrc.js

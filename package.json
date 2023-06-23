@@ -6,7 +6,9 @@
     "watch": "lerna run --parallel prebuild && tsc --build --watch",
     "clean": "npx shx rm -rf {.,packages/*}/{node_modules,lib,dist}",
     "fmt": "cargo fmt --check",
-    "clippy": "cargo clippy --all-targets -- -D warnings -A clippy::result_large_err -A clippy::too_many_arguments"
+    "clippy": "cargo clippy --all-targets -- -D warnings -A clippy::result_large_err -A clippy::too_many_arguments",
+    "amman": "amman",
+    "anchor-client-gen": "anchor-client-gen"
   },
   "workspaces": [
     "packages/*"
@@ -17,6 +19,8 @@
   "private": true,
   "dependencies": {
     "@coral-xyz/anchor": "^0.27.0",
+    "@metaplex-foundation/amman": "0.12.1",
+    "anchor-client-gen": "0.28.1",
     "@helium/anchor-resolvers": "^0.2."
   },
   "devDependencies": {
